@@ -1,4 +1,3 @@
-"""
 # Day 1
 def connected(h,t):
     if (h in surr(t)):
@@ -40,7 +39,7 @@ with(open("/Users/silasmaughan/CodingProjects/AOC/AOC2022/input.txt", "r") as tx
         if squares not in tSquares:
             tSquares.append(squares)
     print(len(tSquares))
-"""
+
 # Day 2
 def connected(h,t):
     if (h in surr(t)):
@@ -131,5 +130,4 @@ with(open("/Users/silasmaughan/CodingProjects/AOC/AOC2022/input.txt", "r") as tx
     for squares in tHistory:
         if squares not in tSquares:
             tSquares.append(squares)
-    print(len(tSquares))
-   
+    print(len(tSquares))   

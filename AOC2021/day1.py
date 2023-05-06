@@ -1,19 +1,10 @@
-nums = []
-count = 0
-count2 = 0
-# Take input into list
-with open("input.txt", "r") as f:
-    for x in f:
-        nums.append(x.strip("\n"))
+end = 0
+with open("input.txt", 'r') as f:
+    data = list(map(int, f.read().splitlines()))
 
-# Part 1
-for y in range(len(nums)- 1):
-    if int(nums[y]) < int(nums[y+1]): count += 1
-print(count)
+for num in range(len(data) - 3):
+    comp = data[num] + data[num+1] + data[num+2]
+    if comp < (data[num+1] + data[num+2] + data[num+3]):
+        end += 1
 
-#Part 2 
-for y in range(len(nums) - 3):
-    fir = int(nums[y]) + int(nums[y+1]) + int(nums[y+2])
-    sir = int(nums[y+1]) + int(nums[y+2]) + int(nums[y+3])
-    if sir > fir: count2 += 1
-print(count2)
+print(end)
